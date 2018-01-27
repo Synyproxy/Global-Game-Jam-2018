@@ -9,21 +9,22 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1625645459782250}
+  m_RootGameObject: {fileID: 1405923497886752}
   m_IsPrefabParent: 1
---- !u!1 &1625645459782250
+--- !u!1 &1405923497886752
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4293860443320308}
-  - component: {fileID: 33556706871110480}
-  - component: {fileID: 65477642890438748}
-  - component: {fileID: 23981721851446604}
-  - component: {fileID: 54137926524061278}
-  - component: {fileID: 114556031914952524}
+  - component: {fileID: 4021484165919148}
+  - component: {fileID: 33965258515467292}
+  - component: {fileID: 65563228428078798}
+  - component: {fileID: 65253006965037844}
+  - component: {fileID: 23141301179089608}
+  - component: {fileID: 54531626926535260}
+  - component: {fileID: 114308903817041838}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Laser
@@ -31,12 +32,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4293860443320308
+--- !u!4 &4021484165919148
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1625645459782250}
+  m_GameObject: {fileID: 1405923497886752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.40600014, y: 0.012874896, z: -0.14000002}
   m_LocalScale: {x: 0.1, y: 0.4, z: 0.10962}
@@ -44,12 +45,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23981721851446604
+--- !u!23 &23141301179089608
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1625645459782250}
+  m_GameObject: {fileID: 1405923497886752}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,19 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33556706871110480
+--- !u!33 &33965258515467292
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1625645459782250}
+  m_GameObject: {fileID: 1405923497886752}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54137926524061278
+--- !u!54 &54531626926535260
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1625645459782250}
+  m_GameObject: {fileID: 1405923497886752}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -100,27 +101,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65477642890438748
+--- !u!65 &65253006965037844
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1625645459782250}
+  m_GameObject: {fileID: 1405923497886752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08, y: 1, z: 0.9999999}
+  m_Center: {x: 0.45939833, y: 0, z: 0}
+--- !u!65 &65563228428078798
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405923497886752}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114556031914952524
+--- !u!114 &114308903817041838
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1625645459782250}
+  m_GameObject: {fileID: 1405923497886752}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1692b106fce2904fa52b4b1e30c6f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpandSpeed: 0.1
+  ExpandSpeed: 1
