@@ -20,7 +20,7 @@ public class Input : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Laser") {
 			activated = true;
-			Debug.Log ("Laser Enter");
+			//Debug.Log ("Laser Enter");
 		}
 
 	}
@@ -29,7 +29,7 @@ public class Input : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Laser") {
 			activated = false;
-			Debug.Log ("Laser Exit");
+			//Debug.Log ("Laser Exit");
 		}
 
 	}
