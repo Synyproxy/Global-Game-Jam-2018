@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Input : MonoBehaviour {
 
-	private bool activated;
+	private bool activated = false;
 
 
 	// Use this for initialization
 	void Start () {
-		activated = false;
 	}
 	
 	// Update is called once per frame
@@ -33,5 +32,9 @@ public class Input : MonoBehaviour {
 			Debug.Log ("Laser Exit");
 		}
 
+	}
+
+	public bool isActive(){
+		return activated;
 	}
 }
