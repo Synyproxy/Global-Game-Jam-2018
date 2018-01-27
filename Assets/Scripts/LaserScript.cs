@@ -61,9 +61,14 @@ public class LaserScript : MonoBehaviour
 
 	void ResetTransform()
 	{
-		transform.localScale -= new Vector3 (1, 1, 0);
-		transform.position -= new Vector3 (ExpandSpeed / 2, 0, 0); 
+		transform.localScale = new Vector3 (0.1f, 0.4f, 1);
+		transform.position = new Vector3 (ExpandSpeed / 2, 0, 0); 
 	}
 
+    public void activateTrigger()
+    {
+        IsTrigger = true;
+
+    }
 
 }
