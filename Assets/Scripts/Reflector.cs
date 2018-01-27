@@ -25,10 +25,13 @@ public class Reflector : MonoBehaviour
 	{
 		inputActivated = transform.GetComponentInChildren<Input> ().isActive();
 
-		if (inputActivated) {
-			transform.GetComponentInChildren<LaserScript> ().enableShooting ();
-		} else {
-			transform.GetComponentInChildren<LaserScript> ().disableShooting();
-		}
+	    if (inputActivated)
+	    {
+	        transform.GetComponentInChildren<LaserScript>().enableInput();
+	    }
+	    else
+	    {       
+            transform.GetComponentInChildren<LaserScript>().ResetTransform();
+	    }
 	}
 }
