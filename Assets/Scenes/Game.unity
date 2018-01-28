@@ -748,7 +748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4487796865391810, guid: 0de669e4df46944448a48db2a5debd72, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: -1.22
       objectReference: {fileID: 0}
     - target: {fileID: 4487796865391810, guid: 0de669e4df46944448a48db2a5debd72, type: 2}
       propertyPath: m_LocalPosition.y
@@ -888,7 +888,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 25e0832f2c0d9ed4d860aeca4860d0ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3e0c433e4dfcfd41a545704d9b9d078, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -906,7 +906,7 @@ Transform:
   m_GameObject: {fileID: 795470445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.4, y: -1.9120928, z: -0.18359375}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -922,6 +922,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea0d207b7b99e9449e7aa5de6c252fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_renderer: {fileID: 795470448}
+  facing_right: {fileID: 21300000, guid: 0bbd6dc57a06f9747b19692f1f103c94, type: 3}
+  facing_left: {fileID: 21300000, guid: bfa4eaa485b866f4b8c61ccc38162623, type: 3}
+  facing_up: {fileID: 21300000, guid: 6437d81678d37dc4d8ec13dd7a1096f5, type: 3}
+  facing_down: {fileID: 21300000, guid: e3e0c433e4dfcfd41a545704d9b9d078, type: 3}
   speed: 0.1
 --- !u!1001 &805779406
 Prefab:
