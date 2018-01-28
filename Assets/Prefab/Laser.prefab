@@ -123,6 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1692b106fce2904fa52b4b1e30c6f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpandSpeed: 0.1
+  ExpandSpeed: 0.5
   Shooting: 1
   inputOn: 0

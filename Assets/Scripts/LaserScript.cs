@@ -76,7 +76,6 @@ public class LaserScript : MonoBehaviour
 	{
 		transform.localScale = new Vector3 (0.1f, 0.15f, 0.1f);
 	    transform.position = transform.parent.position + (transform.position - transform.parent.position).normalized / 2;
-
 	}
    
     public void enableShooting()
