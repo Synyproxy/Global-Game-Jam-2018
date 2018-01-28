@@ -8,9 +8,10 @@ public class Reflector : MonoBehaviour
 	private GameObject input;
 
 	[SerializeField]
-	private GameObject output;
+	private GameObject[] output;
 
-	private bool inputActivated = false;
+
+    private bool inputActivated = false;
 
 	private GameObject inputScript;
 
@@ -33,12 +34,16 @@ public class Reflector : MonoBehaviour
 
 	    if (inputActivated)
 	    {
-	        transform.GetComponentInChildren<LaserScript>().enableInput();
-	    }
+            for(int i = 0; i < output.Length; ++i)
+	            output[i].transform.GetComponentInChildren<LaserScript>().enableInput();
+
+        }
 	    else
-	    {       
-            transform.GetComponentInChildren<LaserScript>().ResetTransform();
-	    }
+	    {
+	        for (int i = 0; i < output.Length; ++i)
+                output[i].transform.GetComponentInChildren<LaserScript>().ResetTransform();
+
+        }
 
 	    if (buffPosX != transform.position.x || buffPosY != transform.position.y)
 	    {
