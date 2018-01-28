@@ -10,6 +10,7 @@ TagManager:
   - Transmitter
   - Input
   - Interactable
+  - receptor
   layers:
   - Default
   - TransparentFX

@@ -61,7 +61,7 @@ public class LaserScript : MonoBehaviour
 			ResetTransform ();
 		}
 
-		if (other.gameObject.tag == "Wall")
+		if (other.gameObject.tag == "Wall" || other.gameObject.tag == "receptor")
 		{
 			Shooting = true;
 		}	    

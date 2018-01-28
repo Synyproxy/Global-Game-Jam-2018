@@ -13,6 +13,8 @@ public class Receptor : MonoBehaviour
     [SerializeField]
     private float TimeBeforFade = 1;
 
+    [SerializeField]
+    private Sprite Glow;
 
     private bool win;
     private float i = 0.0f;
@@ -40,7 +42,10 @@ public class Receptor : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Laser")
-            win = true;     
+        if (col.gameObject.tag == "Laser")      
+        {
+            win = true;
+            gameObject.GetComponent<SpriteRenderer>().sprite = Glow;
+        }
     } 
 }
