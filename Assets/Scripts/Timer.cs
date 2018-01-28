@@ -25,7 +25,12 @@ public class Timer : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
             timer--;
             timerText.text = "" + timer;
-        }       
+        }
+        if (timer == 0)
+        {
+            
+            Debug.Log("PERDU");
+        }
         
     }
 }

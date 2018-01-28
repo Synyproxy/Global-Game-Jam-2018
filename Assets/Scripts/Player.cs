@@ -23,10 +23,6 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float speed = 0.1f;
 
-    void Start()
-    {
-    
-    }
 
     void OnTriggerStay(Collider other)
      {
@@ -46,13 +42,15 @@ public class Player : MonoBehaviour
         float y = Input.GetAxisRaw(inputAxisV);
 
         if (x > 0)
-            gameObject.GetComponent<SpriteRenderer>().sprite = facing_right;
-        if (x < 0)
+            gameObject.GetComponent<SpriteRenderer>().sprite = facing_right;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+       else if (x < 0)
             gameObject.GetComponent<SpriteRenderer>().sprite = facing_left;
-        if (y > 0)
+        else if (y > 0)
             gameObject.GetComponent<SpriteRenderer>().sprite = facing_up;
-        if (y <= 0)
+        else if (y <= 0)
             gameObject.GetComponent<SpriteRenderer>().sprite = facing_down;
+
+        
 
         Vector2 direction = new Vector2(x * speed, y * speed);
         transform.Translate(direction);
