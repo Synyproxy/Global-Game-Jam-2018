@@ -70,19 +70,14 @@ public class LaserScript : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-       /* if(other.gameObject.tag == "Reflector")
-        {
-          if (transform.position.x + GetComponent<BoxCollider>().bounds.size.x > other.transform.position.x)
-            {
-                ResetTransform();
-            }          
-        }*/
+       
     }
 
 	public void ResetTransform()
 	{
 		transform.localScale = new Vector3 (0.1f, 0.15f, 0.1f);
-	    transform.position = transform.parent.position;
+	    transform.position = transform.parent.position + (transform.position - transform.parent.position).normalized / 2;
+
 	}
    
     public void enableShooting()

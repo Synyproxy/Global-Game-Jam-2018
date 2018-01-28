@@ -14,13 +14,19 @@ public class Reflector : MonoBehaviour
 
 	private GameObject inputScript;
 
+    public GameObject firstLaser;
+
+    private float buffPosX = 0.0f;
+    private float buffPosY = 0.0f;
+
     // Use this for initialization
-    void Start ()
-	{
-		
-	}
-	
-	// Update is called once per frame
+    void Start()
+    {
+        buffPosX = transform.position.x;
+        buffPosY = transform.position.y;
+    }
+
+    // Update is called once per frame
 	void Update ()
 	{
 		inputActivated = transform.GetComponentInChildren<Input> ().isActive();
@@ -33,5 +39,12 @@ public class Reflector : MonoBehaviour
 	    {       
             transform.GetComponentInChildren<LaserScript>().ResetTransform();
 	    }
+
+	    if (buffPosX != transform.position.x || buffPosY != transform.position.y)
+	    {
+	        firstLaser.GetComponentInChildren<LaserScript>().ResetTransform();
+	        buffPosX = transform.position.x;
+	        buffPosY = transform.position.y;
+        }
 	}
 }
