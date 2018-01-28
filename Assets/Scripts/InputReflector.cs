@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Input : MonoBehaviour {
+public class InputReflector : MonoBehaviour {
 
 	private bool activated = false;
-
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +19,7 @@ public class Input : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Laser") {
 			activated = true;
-			//Debug.Log ("Laser Enter");
+			Debug.Log ("Laser Enter");
 		}
 
 	}
@@ -29,7 +28,7 @@ public class Input : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Laser") {
 			activated = false;
-			//Debug.Log ("Laser Exit");
+			Debug.Log ("Laser Exit");
 		}
 
 	}

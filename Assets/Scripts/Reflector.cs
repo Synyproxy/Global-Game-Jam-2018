@@ -29,7 +29,7 @@ public class Reflector : MonoBehaviour
     // Update is called once per frame
 	void Update ()
 	{
-		inputActivated = transform.GetComponentInChildren<Input> ().isActive();
+		inputActivated = transform.GetComponentInChildren<InputReflector>().isActive();
 
 	    if (inputActivated)
 	    {

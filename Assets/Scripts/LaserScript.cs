@@ -10,7 +10,6 @@ public class LaserScript : MonoBehaviour
     public bool Shooting = true;
     public bool inputOn = false;
 
-
     // Use this for initialization
     void Start ()
     {
