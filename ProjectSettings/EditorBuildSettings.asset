@@ -12,5 +12,11 @@ EditorBuildSettings:
     path: "Assets/Scenes/Cr\xE9dits.unity"
     guid: b6da429a54be5704f8fa2fb84dae2dda
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 96a09cd1251b76f4ab4d9429ab7b1a12
+    path: Assets/Scenes/Niveau1.unity
+    guid: 554f852834d86964ea0ef31ec77af9a5
+  - enabled: 1
+    path: Assets/Scenes/SynyZoo.unity
+    guid: c98b12b29280fac45926cc97ac0fb792
+  - enabled: 1
+    path: Assets/Scenes/Tuto.unity
+    guid: 3836796bc1f8ee84b8482ff255d10c69
