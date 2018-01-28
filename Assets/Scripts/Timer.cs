@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using  UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -28,9 +29,14 @@ public class Timer : MonoBehaviour
         }
         if (timer == 0)
         {
-            
+            Invoke("GameOver", 3.0f);
             Debug.Log("PERDU");
         }
         
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 }

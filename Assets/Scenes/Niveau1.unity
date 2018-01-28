@@ -5439,7 +5439,7 @@ Prefab:
     - target: {fileID: 114158684864676668, guid: 656e39bf72461a94b846f846a13c9ce7,
         type: 2}
       propertyPath: NextScene
-      value: Menu
+      value: Win
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 23083055427262292, guid: 656e39bf72461a94b846f846a13c9ce7, type: 2}
