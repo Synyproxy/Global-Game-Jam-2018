@@ -42,8 +42,7 @@ public class Player : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Interactable")
-        {
-            Debug.Log("oui");
+        { 
 
             if (Input.GetKeyDown(KeyCode.X))
             {

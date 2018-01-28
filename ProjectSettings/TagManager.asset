@@ -9,6 +9,7 @@ TagManager:
   - Laser
   - Transmitter
   - Input
+  - Interactable
   layers:
   - Default
   - TransparentFX
