@@ -9,9 +9,6 @@ public class Player : MonoBehaviour
     private string inputAxisV = "Vertical";
 
     [SerializeField]
-    private SpriteRenderer m_renderer;
-
-    [SerializeField]
     private Sprite facing_right;
 
     [SerializeField]
@@ -28,7 +25,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        m_renderer.sprite = facing_down;
+    
     }
 
     void OnTriggerStay(Collider other)
@@ -49,13 +46,13 @@ public class Player : MonoBehaviour
         float y = Input.GetAxisRaw(inputAxisV);
 
         if (x > 0)
-            m_renderer.sprite = facing_right;
+            gameObject.GetComponent<SpriteRenderer>().sprite = facing_right;
         if (x < 0)
-            m_renderer.sprite = facing_left;
+            gameObject.GetComponent<SpriteRenderer>().sprite = facing_left;
         if (y > 0)
-            m_renderer.sprite = facing_up;
+            gameObject.GetComponent<SpriteRenderer>().sprite = facing_up;
         if (y <= 0)
-            m_renderer.sprite = facing_down;
+            gameObject.GetComponent<SpriteRenderer>().sprite = facing_down;
 
         Vector2 direction = new Vector2(x * speed, y * speed);
         transform.Translate(direction);
