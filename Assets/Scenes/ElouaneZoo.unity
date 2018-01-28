@@ -113,6 +113,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &133256851 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1659995752027408, guid: 0de669e4df46944448a48db2a5debd72,
+    type: 2}
+  m_PrefabInternal: {fileID: 916824242}
+--- !u!54 &133256857
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133256851}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0.5
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0
 --- !u!1001 &195523130
 Prefab:
   m_ObjectHideFlags: 0
@@ -169,6 +189,16 @@ Prefab:
     - target: {fileID: 4643881659337608, guid: 0de669e4df46944448a48db2a5debd72, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 65991928898847382, guid: 0de669e4df46944448a48db2a5debd72,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65165856371632100, guid: 0de669e4df46944448a48db2a5debd72,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0de669e4df46944448a48db2a5debd72, type: 2}
@@ -254,6 +284,26 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e04e07610a37944597ffc15711f3f88, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &283788589 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1659995752027408, guid: 0de669e4df46944448a48db2a5debd72,
+    type: 2}
+  m_PrefabInternal: {fileID: 195523130}
+--- !u!54 &283788595
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 283788589}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0.5
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0
 --- !u!1 &296592227
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,10 +402,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 795470449}
-  - component: {fileID: 795470448}
   - component: {fileID: 795470447}
-  - component: {fileID: 795470446}
+  - component: {fileID: 795470448}
   - component: {fileID: 795470450}
+  - component: {fileID: 795470446}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -363,51 +413,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &795470446
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!54 &795470446
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 795470445}
-  m_BodyType: 0
-  m_Simulated: 0
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  serializedVersion: 2
   m_Mass: 1
-  m_LinearDrag: 0
+  m_Drag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Constraints: 120
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &795470447
-BoxCollider2D:
+--- !u!65 &795470447
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 795470445}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.18674421, y: -0.06495476}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.13, y: 2.07}
-    newSize: {x: 3.13, y: 2.07}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.009532, y: 1.5178866}
-  m_EdgeRadius: 0
+  m_Size: {x: 3.13, y: 2.07, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &795470448
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -39,13 +39,16 @@ public class Player : MonoBehaviour
         m_direction.y = Input.GetAxisRaw("Vertical");
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "InterractionDistance")
+        if (other.gameObject.tag == "Interactable")
         {
+            Debug.Log("oui");
+
             if (Input.GetKeyDown(KeyCode.X))
             {
-                other.transform.parent.transform.Rotate(new Vector3(0, 0, 90));
+                other.transform.parent.transform.Rotate(new Vector3(0, 0, -90));
+                other.transform.parent.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             }
         }
     }

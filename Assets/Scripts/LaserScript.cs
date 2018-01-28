@@ -35,13 +35,13 @@ public class LaserScript : MonoBehaviour
                 ResetTransform();
 
             Shooting = false;
-            Debug.Log("I HIT A SPHERE");         
+            //Debug.Log("I HIT A SPHERE");         
         }
 
         if (other.gameObject.tag == "Wall")
         {
             Shooting = false;
-           Debug.Log("WALL");
+           //Debug.Log("WALL");
         }
 
 		//Special Case for Transmitter
@@ -49,7 +49,7 @@ public class LaserScript : MonoBehaviour
         {
             Shooting = true;
             inputOn = true;
-            Debug.Log("Transmitter");
+           // Debug.Log("Transmitter");
         }  
     }
 
