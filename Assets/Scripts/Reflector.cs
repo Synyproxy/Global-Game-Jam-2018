@@ -36,13 +36,11 @@ public class Reflector : MonoBehaviour
 	    {
             for(int i = 0; i < output.Length; ++i)
 	            output[i].transform.GetComponentInChildren<LaserScript>().enableInput();
-
         }
 	    else
 	    {
 	        for (int i = 0; i < output.Length; ++i)
                 output[i].transform.GetComponentInChildren<LaserScript>().ResetTransform();
-
         }
 
 	    if (buffPosX != transform.position.x || buffPosY != transform.position.y)
