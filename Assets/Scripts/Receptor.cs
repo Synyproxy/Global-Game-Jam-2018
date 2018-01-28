@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Receptor : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class Receptor : MonoBehaviour
     private bool win;
     private float i = 0.0f;
     private float j = 0.0f;
-	
+
+    public string NextScene = "";
+
+    
 	void FixedUpdate ()
 	{
 
@@ -35,8 +39,13 @@ public class Receptor : MonoBehaviour
                                                                                          i
                                                                                          );
                 i += speedFade;
+              
             }
             j++;
+
+            if (i >= 3)
+                LoadScene();
+
         }     
 	}
 
@@ -46,6 +55,15 @@ public class Receptor : MonoBehaviour
         {
             win = true;
             gameObject.GetComponent<SpriteRenderer>().sprite = Glow;
-        }
-    } 
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+}
+    }
+
+    public void LoadScene()
+    {
+        Debug.Log("LOAD SCENE");
+        SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
+
+    }
 }
