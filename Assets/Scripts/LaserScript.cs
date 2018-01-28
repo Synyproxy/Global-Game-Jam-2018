@@ -7,19 +7,13 @@ public class LaserScript : MonoBehaviour
 {
     
     public float ExpandSpeed = 0.1f;
-    private float initialPositionX;
-    private float initialPositionY;
-    private bool Shooting = true;
-    private bool inputOn = false;
+    public bool Shooting = true;
+    public bool inputOn = false;
 
-    private float buffPosX = 0.0f;
-    private float buffPosY = 0.0f;
 
     // Use this for initialization
     void Start ()
     {
-        initialPositionX = transform.position.x;               
-        initialPositionY = transform.position.y;
 
     }
 	
@@ -35,22 +29,20 @@ public class LaserScript : MonoBehaviour
 	}
     void OnTriggerEnter(Collider other) 
     {
+
         if (other.gameObject.tag == "Reflector")
         {           
             if (!Shooting )
                 ResetTransform();
 
             Shooting = false;
-
-            buffPosX = other.gameObject.transform.position.x;
-            buffPosY = other.gameObject.transform.position.y;
-            // Debug.Log("I HIT A SPHERE");         
+            Debug.Log("I HIT A SPHERE");         
         }
 
         if (other.gameObject.tag == "Wall")
         {
             Shooting = false;
-           // Debug.Log("WALL");
+           Debug.Log("WALL");
         }
 
 		//Special Case for Transmitter
@@ -58,9 +50,8 @@ public class LaserScript : MonoBehaviour
         {
             Shooting = true;
             inputOn = true;
-        }
-
-       
+            Debug.Log("Transmitter");
+        }  
     }
 
 	void OnTriggerExit(Collider other)
@@ -74,36 +65,26 @@ public class LaserScript : MonoBehaviour
 		if (other.gameObject.tag == "Wall")
 		{
 			Shooting = true;
-		}
-
-	    
+		}	    
     }
 
     void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Reflector")
+       /* if(other.gameObject.tag == "Reflector")
         {
-            if (Mathf.Abs(other.gameObject.transform.position.x - buffPosX) > 0.5f || Mathf.Abs(other.gameObject.transform.position.y - buffPosY) > 0.5f)
+          if (transform.position.x + GetComponent<BoxCollider>().bounds.size.x > other.transform.position.x)
+            {
                 ResetTransform();
-
-            Debug.Log("STAY");
-
-            buffPosX = other.gameObject.transform.position.x;
-            buffPosY = other.gameObject.transform.position.y;
-        }
-
+            }          
+        }*/
     }
 
 	public void ResetTransform()
 	{
 		transform.localScale = new Vector3 (0.1f, 0.15f, 0.1f);
 	    transform.position = transform.parent.position;
-	   // Debug.Log("Parent is at " + transform.parent.position);
-	    //new Vector3(initialPositionX, initialPositionY, 0); 
 	}
-
-  
-
+   
     public void enableShooting()
     {
         Shooting = true;
