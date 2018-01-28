@@ -4,51 +4,30 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+  
+    private string inputAxisH = "Horizontal";
+    private string inputAxisV = "Vertical";
+
     [SerializeField]
-    private float speed = 2.0f;
-
-    private Vector3 m_direction = Vector3.zero;
-
-    // Use this for initialization
-    void Start()
-    {
-    }
-
-    void FixedUpdate()
-    {
-        m_direction.x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        m_direction.z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-
-        Move();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        TryInput();
-    }
-
-    public void Move()
-    {
-        transform.Translate(m_direction * speed * Time.deltaTime);
-    }
-
-    void TryInput()
-    {
-        m_direction.x = Input.GetAxisRaw("Horizontal");
-        m_direction.y = Input.GetAxisRaw("Vertical");
-    }
+    private float speed = 0.1f;
 
     void OnTriggerStay(Collider other)
+     {
+         if (other.gameObject.tag == "Interactable")
+         { 
+             if (Input.GetKeyDown(KeyCode.X))
+             {
+                 other.transform.parent.transform.Rotate(new Vector3(0, 0, -90));
+                 other.transform.parent.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+             }
+         }
+     }
+   
+    void FixedUpdate()
     {
-        if (other.gameObject.tag == "Interactable")
-        { 
-
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                other.transform.parent.transform.Rotate(new Vector3(0, 0, -90));
-                other.transform.parent.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            }
-        }
+        float x = Input.GetAxisRaw(inputAxisH);
+        float y = Input.GetAxisRaw(inputAxisV);
+        Vector2 direction = new Vector2(x * speed, y * speed);
+        transform.Translate(direction);
     }
 }
