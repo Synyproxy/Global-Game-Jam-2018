@@ -17,7 +17,7 @@ public class LoadScene : MonoBehaviour {
 
     public void LoadNewScene()
     {
-        SceneManager.LoadScene("Game", LoadSceneMode.Single);
+        SceneManager.LoadScene("Tuto", LoadSceneMode.Single);
     }
 
     public void QuitGame()
